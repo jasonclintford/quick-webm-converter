@@ -3,17 +3,6 @@
 Browser-based video conversion to WebM using `ffmpeg.wasm`.
 No upload is performed. Files stay local in the browser.
 
-## Repository Packaging
-
-This folder is prepared as a clean GitHub-ready repository:
-
-- Includes source (`src/`) and static assets (`public/`).
-- Includes GitHub Pages workflow at `.github/workflows/deploy.yml`.
-- Includes vendored FFmpeg core files:
-  - `public/ffmpeg-core/ffmpeg-core.js`
-  - `public/ffmpeg-core/ffmpeg-core.wasm`
-
-Because FFmpeg core is already in `public/ffmpeg-core`, the deployed site does not need to fetch core from a third-party CDN.
 
 ## Features
 
@@ -78,12 +67,7 @@ npm run test
 - `preview`: serves the built app
 - `test`: runs Vitest tests
 
-## Deploy to GitHub Pages
 
-1. Push this repository to GitHub.
-2. Open repository `Settings` -> `Pages`.
-3. Set source to `GitHub Actions`.
-4. Use your workflow to build and publish the `dist/` output.
 
 Notes:
 - The app is configured for static hosting and relative asset paths.
